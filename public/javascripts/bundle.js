@@ -124,6 +124,12 @@ var socket = socket_io_client__WEBPACK_IMPORTED_MODULE_1___default()('http://loc
 socket.on('server-status', function (data) {
   loadavg.text(data.loadavg.toString());
 });
+socket.on('connect', function () {
+  console.log('接続しました');
+});
+socket.on('disconnect', function () {
+  console.log('切断しました');
+});
 
 /***/ }),
 /* 1 */
